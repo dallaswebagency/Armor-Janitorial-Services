@@ -80,7 +80,8 @@ nav.main a:hover::after,nav.main a.on::after{width:100%}
 .hero-services a b{display:block;font-family:var(--serif);font-size:.72rem;letter-spacing:.2em;color:var(--lime);margin-bottom:.25rem}
 .hero-services a:hover{color:#fff}
 .hero-media{position:relative}
-.hero-media video,.hero-media img.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-media img.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% center;animation:heroZoom 14s ease-out both}
+@keyframes heroZoom{from{transform:scale(1.1)}to{transform:scale(1)}}
 .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--forest) 0%,rgba(18,52,38,0) 22%),linear-gradient(0deg,rgba(12,31,23,.45),rgba(12,31,23,0) 40%)}
 .seal{position:absolute;left:-74px;top:50%;transform:translateY(-50%);width:148px;height:148px;z-index:3;background:var(--lime);border-radius:50%;display:grid;place-items:center;box-shadow:0 20px 50px rgba(0,0,0,.3)}
 .seal svg.ring{position:absolute;inset:0;width:100%;height:100%;animation:spin 22s linear infinite}
@@ -102,20 +103,52 @@ section{padding:clamp(4.5rem,9vw,8rem) 0}
 .sec-head{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-bottom:3.2rem}
 .sec-head .eyebrow{color:var(--lime-deep);margin-bottom:1.1rem}
 .sec-head p{color:var(--muted);font-size:1.08rem;max-width:34rem;justify-self:end}
-.panels{display:flex;gap:14px;height:560px}
-.panel{position:relative;flex:1;border-radius:22px;overflow:hidden;cursor:pointer;transition:flex .7s cubic-bezier(.2,.8,.2,1);color:#fff;min-width:0}
-.panel.open{flex:2.6}
-.panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s}
-.panel:hover img{transform:scale(1.04)}
-.panel::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,31,23,.92) 0%,rgba(12,31,23,.25) 55%,rgba(12,31,23,.1))}
-.panel .num{position:absolute;top:1.4rem;left:1.5rem;z-index:2;font-family:var(--serif);font-size:.85rem;letter-spacing:.2em;background:rgba(255,255,255,.14);backdrop-filter:blur(6px);padding:.4rem .8rem;border-radius:999px}
-.panel .body{position:absolute;left:1.6rem;right:1.6rem;bottom:1.6rem;z-index:2}
-.panel h3{font-size:clamp(1.3rem,2vw,1.9rem)}
-.panel .more{max-height:0;opacity:0;overflow:hidden;transition:max-height .6s,opacity .5s,margin .5s}
-.panel.open .more{max-height:200px;opacity:1;margin-top:.8rem}
-.panel .more p{color:#d5e6dc;max-width:28rem}
-.panel .more a{display:inline-flex;margin-top:1rem;color:var(--lime);font-weight:600;gap:.4rem;align-items:center}
-.panel .more a:hover{gap:.8rem}
+.svc{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.svc::before{content:"";position:absolute;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(91,227,58,.16),transparent 65%);left:-220px;top:-180px;pointer-events:none}
+.svc-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,5vw,5rem);align-items:stretch;position:relative}
+.svc-left{display:flex;flex-direction:column}
+.svc-left .eyebrow{color:var(--lime);margin-bottom:1.1rem}
+.svc-left h2{margin-bottom:1.1rem}
+.svc-left > p{color:#bcd2c5;font-size:1.05rem;max-width:30rem}
+.svc-tabs{margin-top:2.6rem;display:grid;gap:.4rem}
+.svc-tab{all:unset;cursor:pointer;display:grid;grid-template-columns:3.2rem 1fr auto;align-items:center;gap:.4rem 1rem;padding:1.3rem 1.2rem;border-radius:18px;position:relative;transition:background .35s}
+.svc-tab:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+.svc-tab .n{font-family:var(--serif);font-size:.85rem;letter-spacing:.18em;color:#7f9b8d;transition:color .3s}
+.svc-tab .t{font-family:var(--serif);font-size:clamp(1.2rem,1.9vw,1.6rem);font-weight:600;color:#8fab9d;transition:color .3s}
+.svc-tab .arr{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.18);display:grid;place-items:center;transition:.35s;color:#8fab9d}
+.svc-tab .arr svg{width:18px;height:18px}
+.svc-tab .d{grid-column:2/4;color:#bcd2c5;font-size:.98rem;max-height:0;opacity:0;overflow:hidden;transition:max-height .5s,opacity .4s}
+.svc-tab .bar{position:absolute;left:1.2rem;right:1.2rem;bottom:0;height:2px;background:rgba(255,255,255,.1);overflow:hidden;border-radius:2px}
+.svc-tab .bar i{display:block;height:100%;width:0;background:var(--lime)}
+.svc-tab:hover .t{color:#fff}
+.svc-tab.on{background:rgba(255,255,255,.06)}
+.svc-tab.on .n{color:var(--lime)}
+.svc-tab.on .t{color:#fff}
+.svc-tab.on .arr{background:var(--lime);border-color:var(--lime);color:var(--ink);transform:rotate(-45deg)}
+.svc-tab.on .d{max-height:120px;opacity:1}
+.svc-tab.on .bar i{animation:fill var(--dur,7s) linear forwards}
+.svc.paused .svc-tab.on .bar i{animation-play-state:paused}
+@keyframes fill{to{width:100%}}
+.svc-stage{position:relative;border-radius:26px;overflow:hidden;min-height:620px;background:var(--forest)}
+.svc-slide{position:absolute;inset:0;clip-path:inset(0 0 0 100%);transition:clip-path 1s cubic-bezier(.7,0,.2,1)}
+.svc-slide.on{clip-path:inset(0 0 0 0);z-index:2}
+.svc-slide.out{clip-path:inset(0 100% 0 0);z-index:1}
+.svc-slide img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 1.6s cubic-bezier(.2,.8,.2,1)}
+.svc-slide.on img{transform:scale(1)}
+.svc-stage::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(0deg,rgba(12,31,23,.85),rgba(12,31,23,0) 50%)}
+.svc-big{position:absolute;right:1.6rem;top:1rem;z-index:4;font-family:var(--serif);font-weight:700;font-size:clamp(5rem,10vw,9rem);line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.7);pointer-events:none}
+.svc-card{position:absolute;left:1.6rem;right:1.6rem;bottom:1.6rem;z-index:4;display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+.svc-card .tag{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--lime);color:var(--ink);padding:.35rem .8rem;border-radius:999px;margin-bottom:.8rem}
+.svc-card h3{font-size:clamp(1.6rem,2.6vw,2.4rem)}
+.svc-card p{color:#d5e6dc;margin-top:.4rem;max-width:26rem}
+.svc-card .txt{transition:opacity .4s,transform .4s}
+.svc-card .txt.swap{opacity:0;transform:translateY(12px)}
+.svc-nav{display:flex;gap:.5rem}
+.svc-nav button{width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.4);background:rgba(12,31,23,.35);backdrop-filter:blur(6px);color:#fff;cursor:pointer;display:grid;place-items:center;transition:.25s}
+.svc-nav button:hover{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+.svc-nav svg{width:20px;height:20px}
+.svc-quote{margin-top:auto;padding-top:2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.svc-quote small{color:#9fbcae}
 
 /* about */
 .about{background:#fff}
@@ -254,9 +287,11 @@ footer a:hover{color:var(--lime)}
   .util .tags{display:none}
   .sec-head{grid-template-columns:1fr;gap:1rem}
   .sec-head p{justify-self:start}
-  .panels{flex-direction:column;height:auto}
-  .panel,.panel.open{flex:none;height:340px}
-  .panel .more{max-height:200px;opacity:1;margin-top:.8rem}
+  .svc-grid{grid-template-columns:1fr}
+  .svc-stage{min-height:440px}
+  .svc-stage::after{background:linear-gradient(0deg,rgba(12,31,23,.92),rgba(12,31,23,0) 65%)}
+  .svc-big{font-size:4.5rem}
+  .svc-left .svc-tabs{margin-top:1.6rem}
   .about-grid,.rev-grid,.contact-box{grid-template-columns:1fr}
   .about-visual{max-width:520px}
   .mosaic{grid-template-columns:1fr 1fr;grid-template-rows:repeat(5,170px);grid-template-areas:"a b" "a c" "d e" "f f" "g h"}
@@ -354,10 +389,7 @@ footer a:hover{color:var(--lime)}
       </div>
     </div>
     <div class="hero-media">
-      <img class="poster" src="images/hero.jpg" alt="Armor Janitorial cleaning crew heading out to a job">
-      <video autoplay muted loop playsinline poster="images/hero.jpg">
-        <source src="https://videos.pexels.com/video-files/6195141/6195141-uhd_3840_2160_25fps.mp4" type="video/mp4">
-      </video>
+      <img class="poster" src="images/hero.jpg" alt="Armor Janitorial cleaners leaving an office building with their equipment">
       <div class="seal" aria-hidden="true">
         <svg class="ring" viewBox="0 0 200 200">
           <defs><path id="sealArc" d="M 100,100 m -76,0 a 76,76 0 1,1 152,0 a 76,76 0 1,1 -152,0"/></defs>
@@ -377,43 +409,54 @@ footer a:hover{color:var(--lime)}
   </div>
 </div>
 
-<section id="services">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div>
-        <span class="eyebrow">Our Services</span>
-        <h2>Janitorial care for every environment</h2>
-      </div>
+<section class="svc" id="services">
+  <div class="wrap svc-grid">
+    <div class="svc-left rv">
+      <span class="eyebrow">Our Services</span>
+      <h2>Janitorial care for every environment</h2>
       <p>Expert janitorial services for residential, commercial, institutional, and industrial clients using eco-friendly products.</p>
+      <div class="svc-tabs" role="tablist" aria-label="Services">
+        <button class="svc-tab on" role="tab" aria-selected="true" data-i="0">
+          <span class="n">01</span><span class="t">Residential Cleaning</span>
+          <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="d">Safe, thorough cleaning for your home environment.</span>
+          <span class="bar"><i></i></span>
+        </button>
+        <button class="svc-tab" role="tab" aria-selected="false" data-i="1">
+          <span class="n">02</span><span class="t">Commercial Janitorial</span>
+          <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="d">Expert cleaning for your business needs.</span>
+          <span class="bar"><i></i></span>
+        </button>
+        <button class="svc-tab" role="tab" aria-selected="false" data-i="2">
+          <span class="n">03</span><span class="t">Industrial Solutions</span>
+          <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <span class="d">Dependable cleaning for industrial facilities and work sites.</span>
+          <span class="bar"><i></i></span>
+        </button>
+      </div>
+      <div class="svc-quote">
+        <a href="#contact" class="btn btn-lime" id="svcCta">Get a quote for Residential
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <small>or call <a href="tel:4035421287" style="color:#fff;font-weight:600">403 542 1287</a></small>
+      </div>
     </div>
-    <div class="panels rv" id="panels">
-      <article class="panel open">
-        <img src="images/residential.jpg" alt="Residential cleaning of window shutters">
-        <span class="num">01</span>
-        <div class="body">
-          <h3>Residential Cleaning</h3>
-          <div class="more"><p>Safe, thorough cleaning for your home environment.</p>
-            <a href="#contact">Get started <span>→</span></a></div>
+    <div class="svc-stage rv" id="svcStage">
+      <div class="svc-slide on"><img src="images/residential.jpg" alt="Residential cleaner wiping a kitchen countertop"></div>
+      <div class="svc-slide"><img src="images/commercial.jpg" alt="Commercial janitor cleaning office windows"></div>
+      <div class="svc-slide"><img src="images/industrial.jpg" alt="Industrial worker pressure washing a warehouse floor"></div>
+      <div class="svc-big" id="svcNum">01</div>
+      <div class="svc-card">
+        <div class="txt" id="svcTxt">
+          <span class="tag" id="svcTag">Homes</span>
+          <h3 id="svcTitle">Residential Cleaning</h3>
+          <p id="svcDesc">Safe, thorough cleaning for your home environment.</p>
         </div>
-      </article>
-      <article class="panel">
-        <img src="images/commercial.jpg" alt="Commercial janitorial team washing storefront windows">
-        <span class="num">02</span>
-        <div class="body">
-          <h3>Commercial Janitorial</h3>
-          <div class="more"><p>Expert cleaning for your business needs.</p>
-            <a href="#contact">Get started <span>→</span></a></div>
+        <div class="svc-nav">
+          <button id="svcPrev" aria-label="Previous service"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+          <button id="svcNext" aria-label="Next service"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
-      </article>
-      <article class="panel">
-        <img src="images/industrial.jpg" alt="Industrial cleaning crew at a work site">
-        <span class="num">03</span>
-        <div class="body">
-          <h3>Industrial Solutions</h3>
-          <div class="more"><p>Dependable cleaning for industrial facilities and work sites.</p>
-            <a href="#contact">Get started <span>→</span></a></div>
-        </div>
-      </article>
+      </div>
     </div>
   </div>
 </section>
@@ -522,12 +565,12 @@ footer a:hover{color:var(--lime)}
     <div class="mosaic rv">
       <figure class="m1"><img src="images/trained-pro.jpg" alt="Janitorial professional with cleaning cart"></figure>
       <figure class="m2"><img src="images/corridor.jpg" alt="Mopping a clean corridor"></figure>
-      <figure class="m3"><img src="images/commercial.jpg" alt="Storefront window washing"></figure>
-      <figure class="m4"><img src="images/floor-machine.jpg" alt="Floor machine cleaning a lobby"></figure>
+      <figure class="m3"><img src="images/gallery-storefront.jpg" alt="Storefront window washing"></figure>
+      <figure class="m4"><img src="images/gallery-lobby.jpg" alt="Floor machine cleaning a lobby"></figure>
       <figure class="m5"><img src="images/eco-jars.jpg" alt="Eco-friendly cleaning products"></figure>
-      <figure class="m6"><img src="images/residential.jpg" alt="Residential window cleaning" style="object-position:center 30%"></figure>
+      <figure class="m6"><img src="images/gallery-shutters.jpg" alt="Residential window cleaning" style="object-position:center 30%"></figure>
       <figure class="m7"><img src="images/cart.jpg" alt="Cleaning cart outside a building"></figure>
-      <figure class="m8"><img src="images/industrial.jpg" alt="Industrial site cleaning"></figure>
+      <figure class="m8"><img src="images/gallery-site.jpg" alt="Industrial site cleaning"></figure>
     </div>
   </div>
 </section>
@@ -616,12 +659,48 @@ document.getElementById('yr').textContent=new Date().getFullYear();
 const nav=document.getElementById('nav'),mb=document.getElementById('menuBtn');
 mb.addEventListener('click',()=>nav.classList.toggle('show'));
 nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('show')));
-// service panels
-const panels=document.querySelectorAll('.panel');
-panels.forEach(p=>{
-  const open=()=>{panels.forEach(x=>x.classList.remove('open'));p.classList.add('open')};
-  p.addEventListener('mouseenter',open);p.addEventListener('click',open);
-});
+// interactive services
+(function(){
+  const data=[
+    {tag:'Homes',t:'Residential Cleaning',d:'Safe, thorough cleaning for your home environment.',v:'Residential',c:'Residential'},
+    {tag:'Businesses',t:'Commercial Janitorial',d:'Expert cleaning for your business needs.',v:'Commercial Janitorial',c:'Commercial Janitorial'},
+    {tag:'Facilities',t:'Industrial Solutions',d:'Dependable cleaning for industrial facilities and work sites.',v:'Industrial',c:'Industrial'}
+  ];
+  const sec=document.getElementById('services'),tabs=[...sec.querySelectorAll('.svc-tab')],slides=[...sec.querySelectorAll('.svc-slide')];
+  const num=document.getElementById('svcNum'),txt=document.getElementById('svcTxt'),tag=document.getElementById('svcTag'),
+        title=document.getElementById('svcTitle'),desc=document.getElementById('svcDesc'),cta=document.getElementById('svcCta');
+  let cur=0,timer=null;const DUR=7000;
+  function go(i){
+    i=(i+data.length)%data.length;if(i===cur){restart();return}
+    slides.forEach((sl,k)=>{sl.classList.remove('out');if(k===cur)sl.classList.add('out');sl.classList.toggle('on',k===i)});
+    setTimeout(()=>slides.forEach((sl,k)=>{if(k!==i)sl.classList.remove('out')}),1000);
+    tabs.forEach((t,k)=>{t.classList.toggle('on',k===i);t.setAttribute('aria-selected',k===i)});
+    txt.classList.add('swap');
+    setTimeout(()=>{const x=data[i];tag.textContent=x.tag;title.textContent=x.t;desc.textContent=x.d;num.textContent='0'+(i+1);txt.classList.remove('swap')},300);
+    cta.firstChild.textContent='Get a quote for '+data[i].c+' ';
+    cur=i;restart();
+  }
+  function restart(){
+    clearTimeout(timer);
+    const bar=tabs[cur].querySelector('.bar i');bar.style.animation='none';bar.offsetWidth;bar.style.animation='';
+    if(!sec.classList.contains('paused'))timer=setTimeout(()=>go(cur+1),DUR);
+  }
+  tabs.forEach((t,k)=>{t.addEventListener('click',()=>go(k));
+    t.addEventListener('keydown',e=>{if(e.key==='ArrowDown'||e.key==='ArrowRight'){e.preventDefault();go(cur+1);tabs[cur].focus()}
+      if(e.key==='ArrowUp'||e.key==='ArrowLeft'){e.preventDefault();go(cur-1);tabs[cur].focus()}})});
+  document.getElementById('svcNext').addEventListener('click',()=>go(cur+1));
+  document.getElementById('svcPrev').addEventListener('click',()=>go(cur-1));
+  const stage=document.getElementById('svcStage');
+  stage.addEventListener('mouseenter',()=>{sec.classList.add('paused');clearTimeout(timer)});
+  stage.addEventListener('mouseleave',()=>{sec.classList.remove('paused');timer=setTimeout(()=>go(cur+1),DUR/2)});
+  // swipe on touch
+  let sx=0;stage.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});
+  stage.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)go(cur+(dx<0?1:-1))});
+  // preselect the service in the quote form
+  cta.addEventListener('click',()=>{const r=document.querySelector('form.quote input[value="'+data[cur].v+'"]');if(r)r.checked=true});
+  // only run autoplay while visible
+  new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)restart();else clearTimeout(timer)}),{threshold:.3}).observe(sec);
+})();
 // reveal
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
