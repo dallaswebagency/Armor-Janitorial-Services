@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Armor Janitorial Services | Eco-Friendly Janitorial Services You Can Trust</title>
+<meta name="description" content="Armor Janitorial Services delivers eco-friendly residential, commercial janitorial and industrial cleaning with insured, trained professionals. Call 403 542 1287.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%235BE33A'/%3E%3Ctext x='32' y='43' font-family='Georgia' font-size='32' font-weight='700' text-anchor='middle' fill='%230c1f17'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Albert+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0c1f17;
+  --forest:#123426;
+  --moss:#1c4a35;
+  --lime:#5be33a;
+  --lime-deep:#3fc21f;
+  --teal:#3fa3a6;
+  --paper:#f5f7f0;
+  --mint:#e6f3df;
+  --line:rgba(12,31,23,.12);
+  --muted:#4f6359;
+  --serif:'Cinzel',Georgia,serif;
+  --sans:'Albert Sans',system-ui,-apple-system,Segoe UI,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1240px,92vw);margin-inline:auto}
+.eyebrow{font-family:var(--serif);font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:.7rem}
+.eyebrow::before{content:"";width:28px;height:2px;background:currentColor}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:-.005em}
+h2{font-size:clamp(2rem,4vw,3.3rem)}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 1.6rem;font-weight:600;font-size:.98rem;border-radius:999px;transition:transform .25s,background .25s,color .25s,box-shadow .25s;cursor:pointer;border:0;font-family:var(--sans)}
+.btn svg{width:18px;height:18px}
+.btn-lime{background:var(--lime);color:var(--ink)}
+.btn-lime:hover{background:#fff;transform:translateY(-2px);box-shadow:0 10px 30px rgba(91,227,58,.35)}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{border-color:var(--lime);color:var(--lime)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:var(--moss);transform:translateY(-2px)}
+
+/* utility bar */
+.util{background:var(--ink);color:#cfe3d6;font-size:.84rem}
+.util .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.55rem 0;flex-wrap:wrap}
+.util .tags{display:flex;gap:1.4rem}
+.util .tags span{display:inline-flex;align-items:center;gap:.45rem}
+.util .tags span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--lime)}
+.util .u-contact{display:flex;gap:1.6rem}
+.util a:hover{color:var(--lime)}
+
+/* header */
+header.site{position:sticky;top:0;z-index:50;background:rgba(245,247,240,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0;gap:1.5rem}
+.brand{display:flex;align-items:center;gap:.85rem}
+.brand svg{width:58px;height:58px;flex:none}
+.brand b{font-family:var(--serif);font-size:1.12rem;letter-spacing:.06em;display:block;line-height:1.1}
+.brand small{font-size:.74rem;color:var(--muted);letter-spacing:.04em}
+nav.main{display:flex;gap:2.1rem;font-weight:500;font-size:.96rem}
+nav.main a{position:relative;padding:.3rem 0}
+nav.main a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--lime-deep);transition:width .3s}
+nav.main a:hover::after,nav.main a.on::after{width:100%}
+.menu-btn{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.menu-btn span{display:block;width:24px;height:2px;background:var(--ink);margin:5px auto;transition:.3s}
+
+/* hero */
+.hero{background:var(--forest);color:#fff;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;min-height:calc(100vh - 120px);max-height:860px}
+.hero-copy{padding:clamp(3rem,7vw,6.5rem) clamp(1.5rem,4vw,4rem) clamp(3rem,6vw,5rem) max(4vw,calc((100vw - 1240px)/2));display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
+.hero .eyebrow{color:var(--lime)}
+.hero h1{font-size:clamp(2.5rem,5.4vw,5rem);margin:1.4rem 0 1.4rem}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero p.lead{font-size:1.18rem;color:#cfe3d6;max-width:30rem}
+.hero .ctas{display:flex;gap:.9rem;margin-top:2.2rem;flex-wrap:wrap}
+.hero-services{display:flex;gap:0;margin-top:3.2rem;border-top:1px solid rgba(255,255,255,.14);padding-top:1.4rem;flex-wrap:wrap}
+.hero-services a{flex:1;min-width:140px;padding-right:1rem;font-size:.92rem;color:#cfe3d6;transition:color .25s}
+.hero-services a b{display:block;font-family:var(--serif);font-size:.72rem;letter-spacing:.2em;color:var(--lime);margin-bottom:.25rem}
+.hero-services a:hover{color:#fff}
+.hero-media{position:relative}
+.hero-media video,.hero-media img.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--forest) 0%,rgba(18,52,38,0) 22%),linear-gradient(0deg,rgba(12,31,23,.45),rgba(12,31,23,0) 40%)}
+.seal{position:absolute;left:-74px;top:50%;transform:translateY(-50%);width:148px;height:148px;z-index:3;background:var(--lime);border-radius:50%;display:grid;place-items:center;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.seal svg.ring{position:absolute;inset:0;width:100%;height:100%;animation:spin 22s linear infinite}
+.seal svg.leaf{width:46px;height:46px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-stat{position:absolute;right:clamp(1rem,3vw,2.5rem);bottom:clamp(1rem,3vw,2.5rem);z-index:3;background:#fff;color:var(--ink);padding:1.1rem 1.4rem;border-radius:16px;display:flex;align-items:center;gap:1rem;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.hero-stat strong{font-family:var(--serif);font-size:2.2rem;line-height:1}
+.hero-stat span{font-size:.86rem;line-height:1.3;color:var(--muted)}
+
+/* marquee */
+.ticker{background:var(--lime);color:var(--ink);overflow:hidden;border-block:1px solid var(--ink)}
+.ticker .track{display:flex;width:max-content;animation:slide 32s linear infinite}
+.ticker span{font-family:var(--serif);font-weight:600;font-size:1.15rem;letter-spacing:.08em;text-transform:uppercase;padding:1rem 1.6rem;white-space:nowrap;display:flex;align-items:center;gap:3.2rem}
+.ticker span::after{content:"✦";font-size:.9rem}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* services */
+section{padding:clamp(4.5rem,9vw,8rem) 0}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-bottom:3.2rem}
+.sec-head .eyebrow{color:var(--lime-deep);margin-bottom:1.1rem}
+.sec-head p{color:var(--muted);font-size:1.08rem;max-width:34rem;justify-self:end}
+.panels{display:flex;gap:14px;height:560px}
+.panel{position:relative;flex:1;border-radius:22px;overflow:hidden;cursor:pointer;transition:flex .7s cubic-bezier(.2,.8,.2,1);color:#fff;min-width:0}
+.panel.open{flex:2.6}
+.panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s}
+.panel:hover img{transform:scale(1.04)}
+.panel::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,31,23,.92) 0%,rgba(12,31,23,.25) 55%,rgba(12,31,23,.1))}
+.panel .num{position:absolute;top:1.4rem;left:1.5rem;z-index:2;font-family:var(--serif);font-size:.85rem;letter-spacing:.2em;background:rgba(255,255,255,.14);backdrop-filter:blur(6px);padding:.4rem .8rem;border-radius:999px}
+.panel .body{position:absolute;left:1.6rem;right:1.6rem;bottom:1.6rem;z-index:2}
+.panel h3{font-size:clamp(1.3rem,2vw,1.9rem)}
+.panel .more{max-height:0;opacity:0;overflow:hidden;transition:max-height .6s,opacity .5s,margin .5s}
+.panel.open .more{max-height:200px;opacity:1;margin-top:.8rem}
+.panel .more p{color:#d5e6dc;max-width:28rem}
+.panel .more a{display:inline-flex;margin-top:1rem;color:var(--lime);font-weight:600;gap:.4rem;align-items:center}
+.panel .more a:hover{gap:.8rem}
+
+/* about */
+.about{background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,6rem);align-items:center}
+.about-visual{position:relative;aspect-ratio:1/1.02}
+.about-visual .big{position:absolute;left:0;top:0;width:82%;aspect-ratio:1;border-radius:50%;overflow:hidden}
+.about-visual .big img{width:100%;height:100%;object-fit:cover}
+.about-visual .small{position:absolute;right:0;bottom:0;width:46%;aspect-ratio:4/5;border-radius:18px;overflow:hidden;border:10px solid #fff;box-shadow:0 25px 50px rgba(12,31,23,.18)}
+.about-visual .small img{width:100%;height:100%;object-fit:cover}
+.about-visual .dot{position:absolute;left:4%;bottom:10%;width:96px;height:96px;border-radius:50%;background:var(--lime);display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-align:center;line-height:1.3}
+.about .eyebrow{color:var(--lime-deep)}
+.about h2{margin:1.1rem 0 1.4rem}
+.about p.txt{color:var(--muted);font-size:1.1rem}
+.proof{display:grid;grid-template-columns:repeat(3,1fr);margin:2.4rem 0 2.4rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.proof div{padding:1.4rem 1rem 1.4rem 0}
+.proof div+div{padding-left:1.2rem;border-left:1px solid var(--line)}
+.proof strong{font-family:var(--serif);font-size:2.3rem;display:block;line-height:1;margin-bottom:.45rem;color:var(--forest)}
+.proof svg{width:38px;height:38px;color:var(--lime-deep);margin-bottom:.45rem}
+.proof span{font-size:.9rem;color:var(--muted);line-height:1.35;display:block}
+
+/* standards */
+.standards{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.standards .bg{position:absolute;inset:0;opacity:.18}
+.standards .bg img{width:100%;height:100%;object-fit:cover;filter:grayscale(.3)}
+.standards .wrap{position:relative}
+.std-top{display:flex;justify-content:space-between;gap:3rem;align-items:end;flex-wrap:wrap;margin-bottom:3.5rem}
+.std-top .eyebrow{color:var(--lime);margin-bottom:1rem}
+.std-top h2{max-width:40rem}
+.std-top p{max-width:26rem;color:#bcd2c5}
+.std-grid{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:18px}
+.std-card{border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:2.2rem;background:rgba(12,31,23,.55);backdrop-filter:blur(4px);display:flex;flex-direction:column}
+.std-card .ico{width:58px;height:58px;border-radius:16px;background:var(--lime);color:var(--ink);display:grid;place-items:center;margin-bottom:auto}
+.std-card .ico svg{width:30px;height:30px}
+.std-card h3{font-size:1.45rem;margin:2.2rem 0 .7rem}
+.std-card p{color:#bcd2c5}
+.std-photo{border-radius:22px;overflow:hidden;position:relative;min-height:380px}
+.std-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.std-photo .badge{position:absolute;left:1.2rem;bottom:1.2rem;right:1.2rem;background:#fff;color:var(--ink);border-radius:14px;padding:1rem 1.2rem;display:flex;gap:.9rem;align-items:center}
+.std-photo .badge svg{width:34px;height:34px;color:var(--lime-deep);flex:none}
+.std-photo .badge b{font-family:var(--serif);font-size:.95rem;letter-spacing:.04em;display:block}
+.std-photo .badge small{color:var(--muted);font-size:.82rem}
+
+/* testimonials */
+.reviews{background:var(--mint)}
+.rev-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;align-items:stretch}
+.rev{background:#fff;border-radius:24px;padding:clamp(2rem,4vw,3.2rem);position:relative;display:flex;flex-direction:column}
+.rev.feature{background:var(--forest);color:#fff}
+.rev .q{font-family:var(--serif);font-size:6rem;line-height:.6;color:var(--lime);height:2.4rem}
+.rev .stars{color:#f5b301;letter-spacing:.2em;font-size:1.05rem;margin-bottom:1.2rem}
+.rev blockquote{font-size:clamp(1.2rem,2vw,1.6rem);line-height:1.45;font-weight:500;margin-bottom:2rem}
+.rev:not(.feature) blockquote{font-size:clamp(1.1rem,1.6vw,1.3rem)}
+.rev .who{margin-top:auto;display:flex;align-items:center;gap:1rem;padding-top:1.4rem;border-top:1px solid var(--line)}
+.rev.feature .who{border-color:rgba(255,255,255,.15)}
+.rev .av{width:52px;height:52px;border-radius:50%;background:var(--lime);color:var(--ink);display:grid;place-items:center;font-family:var(--serif);font-weight:700}
+.rev .who b{display:block}
+.rev .who small{opacity:.75}
+.rev .tag{margin-left:auto;font-size:.76rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border:1px solid currentColor;border-radius:999px;padding:.35rem .8rem;opacity:.85;white-space:nowrap}
+
+/* gallery */
+.gallery .sec-head{margin-bottom:2.4rem}
+.mosaic{display:grid;grid-template-columns:1.1fr 1fr 1fr 1.1fr;grid-template-rows:repeat(3,210px);gap:12px;grid-template-areas:"a b b c" "a d e c" "f f g h"}
+.mosaic figure{overflow:hidden;border-radius:16px;position:relative}
+.mosaic img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.mosaic figure:hover img{transform:scale(1.06)}
+.m1{grid-area:a}.m2{grid-area:b}.m3{grid-area:c}.m4{grid-area:d}.m5{grid-area:e}.m6{grid-area:f}.m7{grid-area:g}.m8{grid-area:h}
+
+/* contact */
+.contact{background:var(--paper);padding-top:0}
+.contact-box{display:grid;grid-template-columns:.9fr 1.1fr;border-radius:28px;overflow:hidden;border:1px solid var(--line);background:var(--forest);color:#fff}
+.c-info{padding:clamp(2.4rem,5vw,4rem);position:relative;overflow:hidden}
+.c-info .eyebrow{color:var(--lime)}
+.c-info h2{margin:1.1rem 0 1rem}
+.c-info p{color:#bcd2c5;max-width:26rem}
+.c-lines{margin-top:2.4rem;display:grid;gap:1rem}
+.c-lines a{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;border:1px solid rgba(255,255,255,.14);border-radius:16px;transition:border-color .25s,background .25s}
+.c-lines a:hover{border-color:var(--lime);background:rgba(91,227,58,.07)}
+.c-lines .i{width:44px;height:44px;border-radius:12px;background:var(--lime);color:var(--ink);display:grid;place-items:center;flex:none}
+.c-lines .i svg{width:20px;height:20px}
+.c-lines small{display:block;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:#9fbcae}
+.c-lines b{font-size:1.08rem}
+.c-info .watermark{position:absolute;right:-60px;bottom:-60px;width:260px;opacity:.07}
+form.quote{background:#fff;color:var(--ink);padding:clamp(2.2rem,5vw,3.6rem);display:grid;grid-template-columns:1fr 1fr;gap:1.1rem 1.2rem;align-content:center}
+form.quote h3{grid-column:1/-1;font-size:1.5rem;margin-bottom:.3rem}
+form.quote label{display:grid;gap:.4rem;font-size:.84rem;font-weight:600;letter-spacing:.02em}
+form.quote .full{grid-column:1/-1}
+form.quote input,form.quote select,form.quote textarea{font:inherit;font-weight:400;font-size:1rem;padding:.9rem 1rem;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);transition:border-color .2s,box-shadow .2s;width:100%}
+form.quote textarea{min-height:120px;resize:vertical}
+form.quote input:focus,form.quote select:focus,form.quote textarea:focus{outline:none;border-color:var(--lime-deep);box-shadow:0 0 0 4px rgba(91,227,58,.18)}
+.chips{display:flex;gap:.6rem;flex-wrap:wrap}
+.chips label{position:relative;display:inline-block}.chips input{position:absolute;inset:0;opacity:0;pointer-events:none}
+.chips span{display:inline-block;padding:.6rem 1rem;border:1.5px solid var(--line);border-radius:999px;font-weight:500;font-size:.92rem;cursor:pointer;background:#fff;transition:.2s}
+.chips input:checked+span{background:var(--ink);color:#fff;border-color:var(--ink)}
+form.quote button{grid-column:1/-1;justify-content:center;margin-top:.4rem}
+.form-note{grid-column:1/-1;font-size:.84rem;color:var(--muted);text-align:center}
+
+/* footer */
+footer{background:var(--ink);color:#bcd2c5;padding:4.5rem 0 0}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:3rem;padding-bottom:3.5rem}
+.f-brand .brand b{color:#fff}
+.f-brand .brand small{color:#9fbcae}
+.f-brand p{margin:1.2rem 0 1.4rem;max-width:20rem}
+.f-badges{display:flex;gap:.6rem;flex-wrap:wrap}
+.f-badges span{font-size:.76rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(91,227,58,.5);color:var(--lime);padding:.4rem .8rem;border-radius:999px}
+footer h4{font-family:var(--serif);color:#fff;font-size:.9rem;letter-spacing:.16em;margin-bottom:1.2rem;font-weight:600}
+footer ul{list-style:none;display:grid;gap:.6rem}
+footer a:hover{color:var(--lime)}
+.socials{display:flex;gap:.6rem;margin-top:1.2rem}
+.socials a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.18);display:grid;place-items:center;transition:.25s}
+.socials a:hover{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.socials svg{width:17px;height:17px}
+.f-bottom{border-top:1px solid rgba(255,255,255,.1);padding:1.4rem 0;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.88rem}
+.f-bottom a{color:var(--lime)}
+
+/* mobile bar */
+.mbar{display:none}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1080px){
+  .hero-grid{grid-template-columns:1fr;max-height:none}
+  .hero-copy{padding:4rem 4vw 3rem}
+  .hero-media{min-height:440px}
+  .hero-media::after{background:linear-gradient(0deg,rgba(12,31,23,.45),rgba(12,31,23,0) 40%)}
+  .seal{left:auto;right:1rem;top:1rem;transform:none;width:118px;height:118px}
+  .std-grid{grid-template-columns:1fr 1fr}
+  .std-photo{grid-column:1/-1;min-height:320px;order:-1}
+  .f-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){
+  nav.main{position:fixed;inset:0 0 auto 0;top:0;background:var(--paper);flex-direction:column;padding:6rem 8vw 2.5rem;gap:1.2rem;font-size:1.3rem;transform:translateY(-110%);transition:transform .45s;z-index:-1;box-shadow:0 20px 40px rgba(0,0,0,.12)}
+  nav.main.show{transform:none}
+  .menu-btn{display:block}
+  header.site .head-cta{display:none}
+  .util .tags{display:none}
+  .sec-head{grid-template-columns:1fr;gap:1rem}
+  .sec-head p{justify-self:start}
+  .panels{flex-direction:column;height:auto}
+  .panel,.panel.open{flex:none;height:340px}
+  .panel .more{max-height:200px;opacity:1;margin-top:.8rem}
+  .about-grid,.rev-grid,.contact-box{grid-template-columns:1fr}
+  .about-visual{max-width:520px}
+  .mosaic{grid-template-columns:1fr 1fr;grid-template-rows:repeat(5,170px);grid-template-areas:"a b" "a c" "d e" "f f" "g h"}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--ink);padding:.6rem;gap:.6rem}
+  .mbar a{justify-content:center;padding:.85rem}
+  body{padding-bottom:70px}
+}
+@media (max-width:600px){
+  .util .u-contact a.mail{display:none}
+  .brand small{display:none}
+  .std-grid{grid-template-columns:1fr}
+  .proof{grid-template-columns:1fr}
+  .proof div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+  form.quote{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr}
+  .rev .who{flex-wrap:wrap}
+  .rev .tag{margin-left:0}
+  .hero-stat{left:1rem;right:auto}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<!-- Reusable logo symbol (recreated from the original Armor Janitorial Services badge) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <path id="logoArc" d="M 100,100 m -72,0 a 72,72 0 1,1 144,0 a 72,72 0 1,1 -144,0"/>
+    <symbol id="armorLogo" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="98" fill="#5be33a"/>
+      <circle cx="100" cy="100" r="88" fill="none" stroke="#0c1f17" stroke-width="1.5" opacity=".35"/>
+      <text font-family="Cinzel, Georgia, serif" font-weight="700" font-size="21" fill="#0c1f17" transform="rotate(-45 100 100)">
+        <textPath href="#logoArc" textLength="335" lengthAdjust="spacingAndGlyphs">ARMOR JANITORIAL SERVICES</textPath>
+      </text>
+      <!-- broom + leaf mark -->
+      <g transform="translate(100 104)">
+        <path d="M-6 -42 L6 -42 L4 8 L-4 8 Z" fill="#0c1f17"/>
+        <path d="M-24 8 H24 L30 40 Q0 48 -30 40 Z" fill="#3fa3a6" stroke="#0c1f17" stroke-width="3"/>
+        <path d="M-16 14 L-19 38 M-6 14 L-7 41 M6 14 L7 41 M16 14 L19 38" stroke="#0c1f17" stroke-width="2.4"/>
+        <path d="M8 -30 C 30 -48, 44 -30, 40 -12 C 22 -12, 10 -18, 8 -30 Z" fill="#0c1f17"/>
+        <path d="M10 -28 C 22 -26, 30 -20, 38 -13" stroke="#5be33a" stroke-width="2" fill="none"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="util">
+  <div class="wrap">
+    <div class="tags"><span>Eco-friendly products</span><span>Insured, trained professionals</span><span>Fully guaranteed</span></div>
+    <div class="u-contact">
+      <a href="tel:4035421287">Mobile: 403 542 1287</a>
+      <a class="mail" href="mailto:info@armorjanitorial.com">info@armorjanitorial.com</a>
+    </div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Armor Janitorial Services home">
+      <svg><use href="#armorLogo"/></svg>
+      <span><b>ARMOR JANITORIAL</b><small>Be Green, Go Armor Clean</small></span>
+    </a>
+    <nav class="main" id="nav">
+      <a href="#top" class="on">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="https://armorjanitorial.com/store">Store</a>
+    </nav>
+    <a href="#contact" class="btn btn-ink head-cta">Get Started
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" style="padding:0">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Be Green, Go Armor Clean</span>
+      <h1>Eco-Friendly Janitorial Services <em>You Can Trust</em></h1>
+      <p class="lead">Professional cleaning for homes, offices, and industries.</p>
+      <div class="ctas">
+        <a href="#contact" class="btn btn-lime">Get Started
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="tel:4035421287" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          403 542 1287</a>
+      </div>
+      <div class="hero-services">
+        <a href="#services"><b>01</b>Residential</a>
+        <a href="#services"><b>02</b>Commercial Janitorial</a>
+        <a href="#services"><b>03</b>Industrial</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img class="poster" src="images/hero.jpg" alt="Armor Janitorial cleaning crew heading out to a job">
+      <video autoplay muted loop playsinline poster="images/hero.jpg">
+        <source src="https://videos.pexels.com/video-files/6195141/6195141-uhd_3840_2160_25fps.mp4" type="video/mp4">
+      </video>
+      <div class="seal" aria-hidden="true">
+        <svg class="ring" viewBox="0 0 200 200">
+          <defs><path id="sealArc" d="M 100,100 m -76,0 a 76,76 0 1,1 152,0 a 76,76 0 1,1 -152,0"/></defs>
+          <text font-family="Cinzel, Georgia, serif" font-weight="700" font-size="15" fill="#0c1f17"><textPath href="#sealArc" textLength="474" lengthAdjust="spacingAndGlyphs">BE GREEN • GO ARMOR CLEAN • BE GREEN • GO ARMOR CLEAN •</textPath></text>
+        </svg>
+        <svg class="leaf" viewBox="0 0 24 24" fill="#0c1f17"><path d="M20 3C9 3 4 9 4 15c0 1.6.4 3 1 4l1.4-1.4C9 12 13 9 17 7c-4 3-7 6-9.5 11.6C9 20 10.5 21 12 21c6 0 9-6 8-18z"/></svg>
+      </div>
+      <div class="hero-stat"><strong>150+</strong><span>Trusted by<br>customers</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="track">
+    <span>Residential Cleaning</span><span>Commercial Janitorial</span><span>Industrial Solutions</span><span>Eco-Friendly Cleaning</span><span>Expert &amp; Safe Service</span>
+    <span>Residential Cleaning</span><span>Commercial Janitorial</span><span>Industrial Solutions</span><span>Eco-Friendly Cleaning</span><span>Expert &amp; Safe Service</span>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <span class="eyebrow">Our Services</span>
+        <h2>Janitorial care for every environment</h2>
+      </div>
+      <p>Expert janitorial services for residential, commercial, institutional, and industrial clients using eco-friendly products.</p>
+    </div>
+    <div class="panels rv" id="panels">
+      <article class="panel open">
+        <img src="images/residential.jpg" alt="Residential cleaning of window shutters">
+        <span class="num">01</span>
+        <div class="body">
+          <h3>Residential Cleaning</h3>
+          <div class="more"><p>Safe, thorough cleaning for your home environment.</p>
+            <a href="#contact">Get started <span>→</span></a></div>
+        </div>
+      </article>
+      <article class="panel">
+        <img src="images/commercial.jpg" alt="Commercial janitorial team washing storefront windows">
+        <span class="num">02</span>
+        <div class="body">
+          <h3>Commercial Janitorial</h3>
+          <div class="more"><p>Expert cleaning for your business needs.</p>
+            <a href="#contact">Get started <span>→</span></a></div>
+        </div>
+      </article>
+      <article class="panel">
+        <img src="images/industrial.jpg" alt="Industrial cleaning crew at a work site">
+        <span class="num">03</span>
+        <div class="body">
+          <h3>Industrial Solutions</h3>
+          <div class="more"><p>Dependable cleaning for industrial facilities and work sites.</p>
+            <a href="#contact">Get started <span>→</span></a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-visual rv">
+      <div class="big"><img src="images/floor-machine.jpg" alt="Floor care machine cleaning a commercial lobby"></div>
+      <div class="small"><img src="images/eco-bags.jpg" alt="Eco-friendly cleaning products"></div>
+      <div class="dot">ECO<br>FRIENDLY</div>
+    </div>
+    <div class="rv">
+      <span class="eyebrow">About Armor</span>
+      <h2>Exceptional Janitorial Services Await You</h2>
+      <p class="txt">Delivering top-notch cleaning solutions with environmentally friendly products for residential, commercial, and industrial needs.</p>
+      <div class="proof">
+        <div><strong>150+</strong><span>Trusted by customers</span></div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 3v6c0 5-3.5 9.5-8 11-4.5-1.5-8-6-8-11V5l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+          <span>Fully guaranteed service</span></div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 3C9 3 4 9 4 15c0 1.6.4 3 1 4"/><path d="M5 19C8 13 12 9 17 7"/><path d="M20 3c1 12-2 18-8 18-1.5 0-3-.6-4-1.6"/></svg>
+          <span>Eco-friendly, non-hazardous products</span></div>
+      </div>
+      <a href="#contact" class="btn btn-ink">Contact
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="standards">
+  <div class="bg"><img src="images/corridor.jpg" alt=""></div>
+  <div class="wrap">
+    <div class="std-top rv">
+      <div>
+        <span class="eyebrow">Why Armor</span>
+        <h2>Clean spaces, safe products, people you can trust</h2>
+      </div>
+      <p>Expert janitorial services for all environments, delivered with a guarantee of expert and safe service.</p>
+    </div>
+    <div class="std-grid">
+      <div class="std-photo rv">
+        <img src="images/eco-flatlay.jpg" alt="Eco-friendly cleaning supplies">
+        <div class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 3v6c0 5-3.5 9.5-8 11-4.5-1.5-8-6-8-11V5l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+          <div><b>GUARANTEED</b><small>Expert &amp; safe service</small></div>
+        </div>
+      </div>
+      <div class="std-card rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 3C9 3 4 9 4 15c0 1.6.4 3 1 4"/><path d="M5 19C8 13 12 9 17 7"/><path d="M20 3c1 12-2 18-8 18-1.5 0-3-.6-4-1.6"/></svg></div>
+        <h3>Eco-Friendly Cleaning</h3>
+        <p>We use non-hazardous materials to ensure a safe environment for your family and employees.</p>
+      </div>
+      <div class="std-card rv">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="7" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/><path d="M15.5 17.5l1.5 1.5 3-3"/></svg></div>
+        <h3>Trained Professionals</h3>
+        <p>Our staff are insured, experienced, and trained to provide top-notch cleaning services you can trust.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <span class="eyebrow">Testimonials</span>
+        <h2>What our clients say</h2>
+      </div>
+      <p>Real feedback from homes and businesses across Alberta.</p>
+    </div>
+    <div class="rev-grid">
+      <article class="rev feature rv">
+        <div class="q">“</div>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>Armor Janitorial Services transformed our office space with its eco-friendly approach.</blockquote>
+        <div class="who">
+          <div class="av">MD</div>
+          <div><b>Martha Drinkwalter</b><small>Chestermere, Alberta</small></div>
+          <span class="tag">Office cleaning</span>
+        </div>
+      </article>
+      <article class="rev rv">
+        <div class="q">“</div>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>The team at Armor Janitorial Services is professional, reliable, and thorough. Highly recommended for both residential and commercial cleaning needs.</blockquote>
+        <div class="who">
+          <div class="av">NT</div>
+          <div><b>Rev. Nguyen Thant</b><small>High River, Alberta</small></div>
+          <span class="tag">Residential &amp; commercial</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <span class="eyebrow">Gallery</span>
+        <h2>Our work in action</h2>
+      </div>
+      <p>Explore our professional cleaning services in action and results.</p>
+    </div>
+    <div class="mosaic rv">
+      <figure class="m1"><img src="images/trained-pro.jpg" alt="Janitorial professional with cleaning cart"></figure>
+      <figure class="m2"><img src="images/corridor.jpg" alt="Mopping a clean corridor"></figure>
+      <figure class="m3"><img src="images/commercial.jpg" alt="Storefront window washing"></figure>
+      <figure class="m4"><img src="images/floor-machine.jpg" alt="Floor machine cleaning a lobby"></figure>
+      <figure class="m5"><img src="images/eco-jars.jpg" alt="Eco-friendly cleaning products"></figure>
+      <figure class="m6"><img src="images/residential.jpg" alt="Residential window cleaning" style="object-position:center 30%"></figure>
+      <figure class="m7"><img src="images/cart.jpg" alt="Cleaning cart outside a building"></figure>
+      <figure class="m8"><img src="images/industrial.jpg" alt="Industrial site cleaning"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-box rv">
+      <div class="c-info">
+        <span class="eyebrow">Get Started</span>
+        <h2>Request your free quote</h2>
+        <p>Tell us about your home, office or facility and our team will get back to you.</p>
+        <div class="c-lines">
+          <a href="tel:4035421287"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+            <span><small>Mobile</small><b>403 542 1287</b></span></a>
+          <a href="mailto:info@armorjanitorial.com"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></span>
+            <span><small>Email</small><b>info@armorjanitorial.com</b></span></a>
+        </div>
+        <svg class="watermark"><use href="#armorLogo"/></svg>
+      </div>
+      <form class="quote" action="mailto:info@armorjanitorial.com" method="post" enctype="text/plain">
+        <h3>Tell us what you need</h3>
+        <label>Full name<input type="text" name="name" placeholder="Your name" required></label>
+        <label>Phone<input type="tel" name="phone" placeholder="Your phone number"></label>
+        <label class="full">Email<input type="email" name="email" placeholder="Your Email Address" required></label>
+        <div class="full">
+          <label style="margin-bottom:.5rem">Service needed</label>
+          <div class="chips">
+            <label><input type="radio" name="service" value="Residential" checked><span>Residential</span></label>
+            <label><input type="radio" name="service" value="Commercial Janitorial"><span>Commercial Janitorial</span></label>
+            <label><input type="radio" name="service" value="Industrial"><span>Industrial</span></label>
+          </div>
+        </div>
+        <label class="full">Message<textarea name="message" placeholder="Tell us about your space"></textarea></label>
+        <button type="submit" class="btn btn-lime">Submit Your Inquiry
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="form-note">Prefer to talk? Call <a href="tel:4035421287"><b>403 542 1287</b></a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <a href="#top" class="brand"><svg><use href="#armorLogo"/></svg><span><b>ARMOR JANITORIAL</b><small>Be Green, Go Armor Clean</small></span></a>
+        <p>Expert janitorial services for all environments.</p>
+        <div class="f-badges"><span>Eco-friendly</span><span>Guaranteed</span><span>Expert &amp; Safe Service</span></div>
+      </div>
+      <div>
+        <h4>EXPLORE</h4>
+        <ul><li><a href="#top">Home</a></li><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li><li><a href="https://armorjanitorial.com/store">Store</a></li></ul>
+      </div>
+      <div>
+        <h4>SERVICES</h4>
+        <ul><li><a href="#services">Residential Cleaning</a></li><li><a href="#services">Commercial Janitorial</a></li><li><a href="#services">Industrial Solutions</a></li></ul>
+      </div>
+      <div>
+        <h4>CONTACT</h4>
+        <ul><li><a href="tel:4035421287">403 542 1287</a></li><li><a href="mailto:info@armorjanitorial.com">info@armorjanitorial.com</a></li></ul>
+        <div class="socials">
+          <a href="https://www.facebook.com/" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a5 5 0 0 0-5 5v2H7v4h2v7h4v-7h3l1-4h-4V9a1 1 0 0 1 1-1z"/></svg></a>
+          <a href="https://www.instagram.com/" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+          <a href="https://tiktok.com/" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.4 2.3 1.9 3.8 4 4v3.2c-1.5 0-2.9-.4-4-1.2v6.5A5.5 5.5 0 1 1 10.5 10v3.3a2.3 2.3 0 1 0 2.3 2.3V3H16z"/></svg></a>
+          <a href="https://x.com/" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.8L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap f-bottom">
+    <span>© <span id="yr">2026</span> Armor Janitorial Services. All rights reserved.</span>
+    <span><a href="https://cleaningdigital.ca/" target="_blank" rel="noopener">Design by Cleaning Digital.</a></span>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a href="tel:4035421287" class="btn btn-ghost">Call</a>
+  <a href="#contact" class="btn btn-lime">Get Started</a>
+</div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+// mobile menu
+const nav=document.getElementById('nav'),mb=document.getElementById('menuBtn');
+mb.addEventListener('click',()=>nav.classList.toggle('show'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('show')));
+// service panels
+const panels=document.querySelectorAll('.panel');
+panels.forEach(p=>{
+  const open=()=>{panels.forEach(x=>x.classList.remove('open'));p.classList.add('open')};
+  p.addEventListener('mouseenter',open);p.addEventListener('click',open);
+});
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
